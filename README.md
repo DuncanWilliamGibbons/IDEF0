@@ -1,6 +1,5 @@
 # IDEF0
-![GitHub All Releases](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total?style=for-the-badge) ![Visitors](https://api.visitorbadge.io/api/visitors?repo=DuncanWilliamGibbons/IDEF0&label=VIEWS&countColor=%23263159&style=flat-badge)
-IDEF0 Modeler &amp; Functional Analysis Software
+[![Github All Releases](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total.svg)]() [![Visitors](https://api.visitorbadge.io/api/visitors?repo=DuncanWilliamGibbons/IDEF0&label=VIEWS&countColor=%23263159&style=flat-badge)]
 
 This software enables users to import, develop, and export Integrated Definition for Function Modeling (IDEF0) models that comply with the ISO/IEC/IEEE 31320-1[^1] standard for functional modeling. The software has an intuitive GUI for the modeler to edit the model and visualize IDEF0 diagrams. 
 
