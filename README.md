@@ -42,15 +42,8 @@ The following data formats are supported for exporting diagram views and plots:
 
 ## Examples and Testing
 
-Tensile test data for 1045 Steel in the Normalized heat treatment conditions were used to test this program. The data used was obtained from the Materials Science and Engineering lab reports at the University of Illinois Urbana-Champaign[^5]. 3 test data files are in the "Test Data" folder and can be used to evaluate and experiment with the software. Below are some examples of the analyses and plots this software can perform.
 
-<img src="Figures/Interface.png" alt="Interface" width="65%"> <img src="Figures/Data Export.png" alt="Data Export" width="25%">
-
-<img src="Figures/Moduli.png" alt="Moduli" width="45%"> <img src="Figures/True Stress-Strain.png" alt="True Stress-Strain" width="45%">
-
-<p align="center">
-<img src="Figures/Ramberg.png" alt="Ramberg" width="65%">
-</p>
+<!--  <img src="Figures/Interface.png" alt="Interface" width="65%"> <img src="Figures/Data Export.png" alt="Data Export" width="25%"> -->
 
 ## Citation and License
 If you adapt or use this software, please refer to the CITATION.cff file for the citation style. This software can be cited as follows:
