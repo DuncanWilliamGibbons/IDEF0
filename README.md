@@ -1,6 +1,6 @@
 # IDEF0
-[![GitHub All Releases](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total.svg)](https://github.com/DuncanWilliamGibbons/IDEF0/releases) [![Visitors](https://api.visitorbadge.io/api/visitors?repo=DuncanWilliamGibbons/IDEF0&label=VIEWS&countColor=%23263159&style=flat-badge)]()
-[![Downloads](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total?style=for-the-badge&color=28a745&logo=github)](https://github.com/DuncanWilliamGibbons/IDEF0/releases)
+[![GitHub All Releases](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total.svg)](https://github.com/DuncanWilliamGibbons/IDEF0/releases) [![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDuncanWilliamGibbons%2FIDEF0&count_bg=%234c1&title_bg=%23555&icon=&icon_color=%23E7E7E7&title=VIEWS&edge_flat=false)](https://hits.seeyoufarm.com)
+% [![Downloads](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total?style=for-the-badge&color=28a745&logo=github)](https://github.com/DuncanWilliamGibbons/IDEF0/releases)
 
 This software enables users to import, develop, and export Integrated Definition for Function Modeling (IDEF0) models that comply with the ISO/IEC/IEEE 31320-1[^1] standard for functional modeling. The software has an intuitive GUI for the modeler to edit the model and visualize IDEF0 diagrams. 
 
