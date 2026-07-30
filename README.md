@@ -26,6 +26,19 @@ To run the IDEF0 program, the following prerequisite Python libraries must be in
 pip install PyQt6, pytest, sys, os
 ```
 After installing these prerequisites, the main_XXX.py (where XXX is the relevant version of the program) file can be run in your IDE of choice, and the GUI will appear.
+## Code Structure
+IDEF0/
+│
+├─ Assembly_AE/
+│   ├─ C
+│   │
+│
+├─ Validation/
+│   ├─ PCA
+│
+├─ requirements.txt
+├─ .gitignore
+└─ README.md
 
 ## Data Format
 An XML-based file format was developed to support the import and export of IDEF0 models. This file format is indicated by .idef0 and contains the functions, ICOMs, and editorial details to repeatably generate the IDEF0 model and associated diagrams. The program also had functionality to parse IDEF0 functional models into the new SysML V2 format per the OMG Systems Modeling Language™ (SysML®) Version 2.0[^3].
