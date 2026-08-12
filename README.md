@@ -26,10 +26,11 @@ The IDEF0 modeling language has its roots in the Structured Analysis and Design 
 ## Table of Contents
 - [Description](#tensile-analyzer)
 - [Features](#features)
-- [Installation Instructions](#installation-instructions)
+- [Installation and Use](#installation-and-use)
 - [Code Structure](#code-structure)
-- [Data Format](#data-format)
+- [Data Formats and Exports](#data-formats-and-exports)
 - [Examples and Testing](#examples-and-testing)
+- [Limitations and Future Work](#limitations-and-future-work)
 - [License and Citation](#citation-and-license)
 - [References](#references)
 ## Features
@@ -65,8 +66,39 @@ The IDEF0 program has the following features:
   views, and double-clicking a row opens that diagram.
 - **Exports** — seven code and interchange formats (below), plus diagram export
   to PNG, JPEG, SVG or PDF.
+
+Three commands govern the state of what you are looking at. They work at
+different scopes, which is the thing to know about them:
+
+| Command | Where | Scope | Undoable |
+| :--- | :--- | :--- | :--- |
+| **Undo** | Model menu | the whole project | — |
+| **Reset Diagram** | Diagram Utilities panel | the active diagram | yes |
+| **Refresh View** | Diagram Utilities panel | nothing — redraws only | n/a |
+
+**Undo** steps the entire project model back to before the last recorded change.
+Every command that alters the model takes a snapshot first, including edits and
+deletions made in the ICOMs and Functions databases, so anything that changed
+the model can be stepped back. Two consequences worth knowing: the history is
+**five deep**, the oldest entry being dropped once it is full; and it is
+**model-wide, not per-diagram**, so an undo of a change made on A2 is undone
+while you are looking at A3. Opening or starting a project clears the history —
+it belongs to the model it was recorded against.
+
+**Reset Diagram** returns the active diagram to how it stood when its tab was
+first opened with content in this session, discarding every box, arrow and
+manual adjustment made to it since. It is itself undoable, so a reset in error
+costs one Undo. On a diagram that has never held a box there is nothing recorded
+to go back to, and it does nothing.
+
+**Refresh View** re-runs layout and routing for every open diagram from the
+model as it currently stands. It changes no data and takes no undo snapshot —
+reach for it when the drawing and the model look out of step, not to alter
+anything. **Model → Automatically Route Arrows** is the destructive relative:
+it discards manual arrow segments, junctions and label offsets so everything is
+routed afresh, and *is* undoable.
   
-## Installation Instructions
+## Installation and Use
 To run the IDEF0 program, the following prerequisite Python libraries must be installed:
 ```
 pip install PyQt6, pytest, sys, os
@@ -152,7 +184,7 @@ Documents/                the IDEF0 standards, validation criteria, reference no
 Example Model/            reference models and the literature they come from
 ```
 
-## Data Format
+## Data Formats and Exports
 An XML-based file format was developed to support the import and export of IDEF0 models. This file format is indicated by .idef0 and contains the functions, ICOMs, and editorial details to repeatably generate the IDEF0 model and associated diagrams. The program also had functionality to parse IDEF0 functional models into the new SysML V2 format per the OMG Systems Modeling Language™ (SysML®) Version 2.0[^3].
 
 Supported data files that can be imported or exported from the IDEF0 software include:
@@ -175,41 +207,6 @@ Functionality is included that parses the IDEF0 models to the following programm
 - Python
 - Java
 - C++
-
-  ## Editing and history
-
-Three commands govern the state of what you are looking at. They work at
-different scopes, which is the thing to know about them:
-
-| Command | Where | Scope | Undoable |
-| :--- | :--- | :--- | :--- |
-| **Undo** | Model menu | the whole project | — |
-| **Reset Diagram** | Diagram Utilities panel | the active diagram | yes |
-| **Refresh View** | Diagram Utilities panel | nothing — redraws only | n/a |
-
-**Undo** steps the entire project model back to before the last recorded change.
-Every command that alters the model takes a snapshot first, including edits and
-deletions made in the ICOMs and Functions databases, so anything that changed
-the model can be stepped back. Two consequences worth knowing: the history is
-**five deep**, the oldest entry being dropped once it is full; and it is
-**model-wide, not per-diagram**, so an undo of a change made on A2 is undone
-while you are looking at A3. Opening or starting a project clears the history —
-it belongs to the model it was recorded against.
-
-**Reset Diagram** returns the active diagram to how it stood when its tab was
-first opened with content in this session, discarding every box, arrow and
-manual adjustment made to it since. It is itself undoable, so a reset in error
-costs one Undo. On a diagram that has never held a box there is nothing recorded
-to go back to, and it does nothing.
-
-**Refresh View** re-runs layout and routing for every open diagram from the
-model as it currently stands. It changes no data and takes no undo snapshot —
-reach for it when the drawing and the model look out of step, not to alter
-anything. **Model → Automatically Route Arrows** is the destructive relative:
-it discards manual arrow segments, junctions and label offsets so everything is
-routed afresh, and *is* undoable.
-
-## Files
 
 | Command | Writes | Contains |
 | :--- | :--- | :--- |
@@ -234,8 +231,6 @@ positioned therefore behaves like a functional import, which is intended.
 An `Export` button on the ICOMs database, the Functions database and each Flow
 Report writes **the rows currently shown**, filter included, as CSV, JSON, XML
 or TXT.
-
-## Exports
 
 **File → Export Code Architecture** writes the functional architecture as:
 
