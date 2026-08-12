@@ -36,10 +36,10 @@ The IDEF0 modeling language has its roots in the Structured Analysis and Design 
 - [License and Citation](#citation-and-license)
 - [References](#references)
 ## Features
-The IDEF0 program has the following features:
-- Import and export IDEF0 models.
-- Develop IDEF0-compliant models and diagrams.
-- Editorial capabilities, including changing colors, fonts, font sizes, arrow styles, thicknesses, box sizes, and spacings.
+
+<p align="center">
+  <img src="figures/GUI.png" alt="IDEF0 Modeler GUI" width="720">
+</p>
 
 - **Full IDEF0 syntax** — function boxes with node numbers and detail references,
   ICOM arrows on all four faces, call arrows, boundary arrows, branches and
