@@ -1,6 +1,4 @@
 # IDEF0 Modeler
-[![GitHub All Releases](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total.svg)](https://github.com/DuncanWilliamGibbons/IDEF0/releases) [![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDuncanWilliamGibbons%2FIDEF0&count_bg=%2328a745&title_bg=%23555&style=for-the-badge&title=VIEWS)](https://hits.seeyoufarm.com)
-
 <p align="center">
   <img src="Documents/Logo/logo_full.png" alt="IDEF0 Modeler" width="420">
 </p>
@@ -18,7 +16,8 @@
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT licence">
 </p>
 
-<!-- [![Downloads](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total?style=for-the-badge&color=28a745&logo=github)](https://github.com/DuncanWilliamGibbons/IDEF0/releases) -->
+[![DOI](https://zenodo.org/badge/1017644488.svg)](https://doi.org/) [![Views](https://api.visitorbadge.io/api/visitors?path=DuncanWilliamGibbons/IDEF0&label=Views&countColor=%23007ec6&style=flat)](https://github.com/DuncanWilliamGibbons/IDEF0) [![License](https://img.shields.io/github/license/DuncanWilliamGibbons/IDEF0?style=flat&color=blue)](https://github.com/DuncanWilliamGibbons/IDEF0/blob/main/LICENSE) [![Last Commit](https://img.shields.io/github/last-commit/DuncanWilliamGibbons/IDEF0?style=flat&color=orange)](https://github.com/DuncanWilliamGibbons/IDEF0/commits/main)
+
 
 This software enables users to import, develop, and export Integrated Definition for Function Modeling (IDEF0) models that comply with the ISO/IEC/IEEE 31320-1[^1] standard for functional modeling. The software has an intuitive GUI for the modeler to edit the model and visualize IDEF0 diagrams. 
 
