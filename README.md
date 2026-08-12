@@ -1,6 +1,6 @@
 # IDEF0 Modeler
 <p align="center">
-  <img src="Documents/Logo/logo_full.png" alt="IDEF0 Modeler" width="420">
+  <img src="figures/logo_full.png" alt="IDEF0 Modeler" width="420">
 </p>
 
 <p align="center">
@@ -56,7 +56,7 @@ The IDEF0 program has the following features:
 - **Verification report** — 22 criteria from ISO/IEC/IEEE 31320-1 evaluated
   against the model, each result saying how it was decided. Every row is PASS or
   FAIL; criteria no tool can decide are listed in
-  [Documents/IDEF0_Validation_Criteria.md](Documents/IDEF0_Validation_Criteria.md)
+  [docs/IDEF0_Validation_Criteria.md](docs/IDEF0_Validation_Criteria.md)
   for a human reviewer rather than reported as passing.
 - **Model database views** — ICOMs and Functions as filterable tables, each with
   an export button writing what the table currently shows as CSV, JSON, XML or TXT.
@@ -123,7 +123,7 @@ python src/main.py
 
 The application opens on an empty A-0 context diagram. To see a real model
 instead, use **File → Open Project** on one of the models in
-[Example Model/](Example%20Model/):
+[examples/](Example%20Model/):
 
 
 ### A first model
