@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="IDEF0Model">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Diagram" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Box" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="description" type="xs:string"/>
+                                    <xs:attribute name="x" type="xs:float"/>
+                                    <xs:attribute name="y" type="xs:float"/>
+                                    <xs:attribute name="width" type="xs:float"/>
+                                    <xs:attribute name="height" type="xs:float"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Arrow" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Segments" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Point" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="x" type="xs:float" use="required"/>
+                                                            <xs:attribute name="y" type="xs:float" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="JunctionPoint" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:attribute name="x" type="xs:float" use="required"/>
+                                                <xs:attribute name="y" type="xs:float" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="BranchPoints" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Point" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="x" type="xs:float" use="required"/>
+                                                            <xs:attribute name="y" type="xs:float" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="JoinPoints" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Point" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="x" type="xs:float" use="required"/>
+                                                            <xs:attribute name="y" type="xs:float" use="required"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:string" use="required"/>
+                                    <xs:attribute name="source_box_id" type="xs:string"/>
+                                    <xs:attribute name="target_box_id" type="xs:string"/>
+                                    <xs:attribute name="type" type="xs:string" use="required"/>
+                                    <xs:attribute name="label" type="xs:string"/>
+                                    <xs:attribute name="branch_parent_id" type="xs:string"/>
+                                    <xs:attribute name="join_target_id" type="xs:string"/>
+                                    <xs:attribute name="is_manual_connection" type="xs:boolean" default="false"/>
+                                    <xs:attribute name="tunnel_source" type="xs:boolean" default="false"/>
+                                    <xs:attribute name="tunnel_target" type="xs:boolean" default="false"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="node_number" type="xs:string" use="required"/>
+                        <xs:attribute name="title" type="xs:string" use="required"/>
+                        <xs:attribute name="parent_diagram_id" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

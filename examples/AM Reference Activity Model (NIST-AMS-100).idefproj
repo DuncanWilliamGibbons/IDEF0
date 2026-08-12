@@ -1,0 +1,2112 @@
+<?xml version="1.0" ?>
+<IDEF0Model name="Additive Manufacturing (AM) Reference Activity Model" generator="IDEF0 Modeler" generatorVersion="0.9.0">
+    <Purpose>&lt;Enter purpose&gt;</Purpose>
+    <Viewpoint>&lt;Enter viewpoint&gt;</Viewpoint>
+    <Author>Duncan W. Gibbons, Ph.D.</Author>
+    <Date>2026-06-10</Date>
+    <Version>1.1</Version>
+    <Diagram node_number="A-0" title="Context: Produce AM Part">
+        <Box id="A0" name="Produce AM Part" description="" x="152.41779189833198" y="147.0540111199364" width="150.0" height="100.0" font_family="Segoe UI" font_size="9" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="P.1" target_box_id="A0" type="Input" label="Feedstock Material" description="" tunnel_source="false" tunnel_target="false" icom_code="P.1" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-211.94837172359016" label_offset_y="-51.94598888006354" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="2" y="197"/>
+                <Point x="152" y="197"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2" target_box_id="A0" type="Control" label="Production Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-254.1640625" label_offset_y="-19.000000000000007" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="190" y="-53"/>
+                <Point x="190" y="147"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.1" target_box_id="A0" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-204.9453125" label_offset_y="-66.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="227" y="-53"/>
+                <Point x="227" y="147"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.3" target_box_id="A0" type="Control" label="Standards" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="83.6640625" label_offset_y="-29.000000000000007" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="265" y="-53"/>
+                <Point x="265" y="147"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="P.2" source_box_id="A0" type="Output" label="AM Part" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="20.0" label_offset_y="-54.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="302" y="180"/>
+                <Point x="452" y="180"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4" source_box_id="A0" type="Output" label="Digital Twin Data" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="15.0" label_offset_y="24.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="302" y="214"/>
+                <Point x="452" y="214"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5" target_box_id="A0" type="Mechanism" label="Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-187.9140625" label_offset_y="-5.999999999999943" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="202" y="447"/>
+                <Point x="202" y="247"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="P.3" target_box_id="A0" type="Mechanism" label="Equipment" description="" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="47.6640625" label_offset_y="-0.9999999999999432" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="252" y="447"/>
+                <Point x="252" y="247"/>
+            </Segments>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A0" title="Decomposition of A0">
+        <Box id="A1" name="Create AM Design" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Segoe UI" font_size="9" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A2" name="Plan Process (Machine Independent)" description="" x="440.0" y="390.0" width="150.0" height="100.0" font_family="Segoe UI" font_size="9" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A3" name="Plan Process (Machine Dependent)" description="" x="730.0" y="630.0" width="150.0" height="100.0" font_family="Segoe UI" font_size="9" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A4" name="Manufacture AM Workpiece" description="" x="1020.0" y="870.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A5" name="Post-Process Workpiece" description="" x="1310.0" y="1110.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A6" name="Evaluate Part" description="" x="1600.0" y="1350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="P.1" type="Input" label="Feedstock Material" description="" tunnel_source="false" tunnel_target="false" icom_code="P.1" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-159.0" label_offset_y="-66.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0" y="920"/>
+                <Point x="75" y="920"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="75.0" y="920.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.2" type="Control" label="Production Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-44.24871816531942" label_offset_y="-113.07940324973968" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262" y="-50"/>
+                <Point x="262" y="0"/>
+                <Point x="1712" y="0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="262.5" y="0.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.1" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-231.60847755628018" label_offset_y="-63.78185068577379" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188" y="-50"/>
+                <Point x="188" y="100"/>
+                <Point x="760" y="100"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="187.5" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.3" type="Control" label="Standards" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-144.11253577019397" label_offset_y="-80.03402996417418" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225" y="-50"/>
+                <Point x="225" y="50"/>
+                <Point x="1675" y="50"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="50.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2" type="Output" label="AM Part" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="15.0" label_offset_y="-79.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1850" y="1417"/>
+                <Point x="1850" y="937"/>
+                <Point x="1900" y="937"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="1850.0" y="936.6666666666666"/>
+                <Point x="1850.0" y="1176.6666666666667"/>
+                <Point x="1850.0" y="1416.6666666666667"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="D.4" type="Output" label="Digital Twin Data" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-19.591671111035566" label_offset_y="-104.26789680198755" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1800" y="903"/>
+                <Point x="1800" y="200"/>
+                <Point x="1900" y="200"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="1800.0" y="690.0"/>
+                <Point x="1800.0" y="903.3333333333334"/>
+                <Point x="1800.0" y="200.0"/>
+                <Point x="1800.0" y="456.6666666666667"/>
+                <Point x="1800.0" y="650.0"/>
+                <Point x="1800.0" y="670.0"/>
+                <Point x="1800.0" y="710.0"/>
+                <Point x="1800.0" y="423.3333333333333"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="D.5" type="Mechanism" label="Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-167.9140625" label_offset_y="23.000000000000114" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225" y="1650"/>
+                <Point x="225" y="1583"/>
+                <Point x="1700" y="1583"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="1583.3333333333333"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.3" type="Mechanism" label="Equipment" description="" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="70.6640625" label_offset_y="21.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1095" y="1650"/>
+                <Point x="1095" y="1517"/>
+                <Point x="1650" y="1517"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="1095.0" y="1516.6666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.5_A1" target_box_id="A1" type="Mechanism" label="Software" description="" branch_parent_id="D.5" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-116.1875" label_offset_y="14.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225" y="1593"/>
+                <Point x="225" y="250"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="1583.3333333333333"/>
+        </Arrow>
+        <Arrow id="D.5_A2" target_box_id="A2" type="Mechanism" label="Software" description="" branch_parent_id="D.5" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-175.46591134356305" label_offset_y="-57.81383910872012" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="1583"/>
+                <Point x="515" y="1583"/>
+                <Point x="515" y="490"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="1583.3333333333333"/>
+        </Arrow>
+        <Arrow id="D.1_A1" target_box_id="A1" type="Control" label="Design Requirements" description="" branch_parent_id="D.1" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-253.03125" label_offset_y="-99.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188" y="90"/>
+                <Point x="188" y="150"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="D.1_A2" target_box_id="A2" type="Control" label="Design Requirements" description="" branch_parent_id="D.1" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-9.78125" label_offset_y="-136.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="198" y="100"/>
+                <Point x="478" y="100"/>
+                <Point x="478" y="390"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="D.1_A3" target_box_id="A3" type="Control" label="Design Requirements" description="" branch_parent_id="D.1" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="31.21875" label_offset_y="-62.0" label_font_family="Segoe UI" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="198" y="100"/>
+                <Point x="760" y="100"/>
+                <Point x="760" y="630"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="P.1_A4" target_box_id="A4" type="Input" label="Feedstock Material" description="" branch_parent_id="P.1" tunnel_source="false" tunnel_target="false" icom_code="P.1" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="75" y="920"/>
+                <Point x="1020" y="920"/>
+            </Segments>
+            <JunctionPoint x="75.0" y="920.0"/>
+        </Arrow>
+        <Arrow id="P.3_A4" target_box_id="A4" type="Mechanism" label="Equipment" description="" branch_parent_id="P.3" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-154.15405929434883" label_offset_y="-13.619439918974535" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1095" y="1527"/>
+                <Point x="1095" y="970"/>
+            </Segments>
+            <JunctionPoint x="1095.0" y="1516.6666666666667"/>
+        </Arrow>
+        <Arrow id="P.3_A5" target_box_id="A5" type="Mechanism" label="Equipment" description="" branch_parent_id="P.3" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1105" y="1517"/>
+                <Point x="1385" y="1517"/>
+                <Point x="1385" y="1210"/>
+            </Segments>
+            <JunctionPoint x="1095.0" y="1516.6666666666667"/>
+        </Arrow>
+        <Arrow id="P.3_A6" target_box_id="A6" type="Mechanism" label="Equipment" description="" branch_parent_id="P.3" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1105" y="1517"/>
+                <Point x="1650" y="1517"/>
+                <Point x="1650" y="1450"/>
+            </Segments>
+            <JunctionPoint x="1095.0" y="1516.6666666666667"/>
+        </Arrow>
+        <Arrow id="D.5_A6" target_box_id="A6" type="Mechanism" label="Software" description="" branch_parent_id="D.5" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="1583"/>
+                <Point x="1700" y="1583"/>
+                <Point x="1700" y="1450"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="1583.3333333333333"/>
+        </Arrow>
+        <Arrow id="D.3.1" target_box_id="A1" type="Control" label="Material Specification" description="" branch_parent_id="D.3" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-266.2220046116973" label_offset_y="-53.46005216493788" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225" y="40"/>
+                <Point x="225" y="150"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.3.1_A2" target_box_id="A2" type="Control" label="Material Specification" description="" branch_parent_id="D.3" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="43.72810797342402" label_offset_y="-124.7806460603239" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="50"/>
+                <Point x="515" y="50"/>
+                <Point x="515" y="390"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.3.1_A3" target_box_id="A3" type="Control" label="Material Specification" description="" branch_parent_id="D.3" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="75.82416184288331" label_offset_y="-149.74186932075435" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="50"/>
+                <Point x="790" y="50"/>
+                <Point x="790" y="630"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="P.2.2" source_box_id="A4" type="Output" label="AM Build" description="" join_target_id="P.2" tunnel_source="false" tunnel_target="false" icom_code="P.2.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-72.29098774642898" label_offset_y="94.44802327868558" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1170" y="937"/>
+                <Point x="1860" y="937"/>
+            </Segments>
+            <JunctionPoint x="1850.0" y="936.6666666666666"/>
+            <BranchPoints>
+                <Point x="1240.0" y="936.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.5" source_box_id="A5" type="Output" label="Manufactured Part" description="" join_target_id="P.2" tunnel_source="false" tunnel_target="false" icom_code="P.2.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-36.13516966916836" label_offset_y="-111.76090869317363" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1460" y="1177"/>
+                <Point x="1850" y="1177"/>
+                <Point x="1850" y="947"/>
+            </Segments>
+            <JunctionPoint x="1850.0" y="936.6666666666666"/>
+            <BranchPoints>
+                <Point x="1530.0" y="1176.6666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.6" source_box_id="A6" type="Output" label="Evaluated Part" description="" join_target_id="P.2" tunnel_source="false" tunnel_target="false" icom_code="P.2.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="48.63955309529297" label_offset_y="23.906167005928182" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1750" y="1417"/>
+                <Point x="1850" y="1417"/>
+                <Point x="1850" y="947"/>
+            </Segments>
+            <JunctionPoint x="1850.0" y="936.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.2.5_A6" target_box_id="A6" type="Input" label="Manufactured Part" description="" branch_parent_id="P.2.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1530" y="1177"/>
+                <Point x="1530" y="1400"/>
+                <Point x="1600" y="1400"/>
+            </Segments>
+            <JunctionPoint x="1530.0" y="1176.6666666666667"/>
+        </Arrow>
+        <Arrow id="P.2.2_A5" target_box_id="A5" type="Input" label="AM Build" description="" branch_parent_id="P.2.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-91.82536656306138" label_offset_y="47.40032583383254" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1240" y="937"/>
+                <Point x="1240" y="1160"/>
+                <Point x="1310" y="1160"/>
+            </Segments>
+            <JunctionPoint x="1240.0" y="936.6666666666666"/>
+        </Arrow>
+        <Arrow id="D.4.6" source_box_id="A3" type="Output" label="Production Plan" description="" join_target_id="D.4" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-20.461734623661528" label_offset_y="-70.5265131013715" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="880" y="690"/>
+                <Point x="1800" y="690"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="1095.0" y="690.0"/>
+                <Point x="1385.0" y="690.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.6_A4" target_box_id="A4" type="Control" label="Production Plan" description="" branch_parent_id="D.4.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="98.15221416766485" label_offset_y="-56.41680243076348" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1095" y="690"/>
+                <Point x="1095" y="870"/>
+            </Segments>
+            <JunctionPoint x="1095.0" y="690.0"/>
+        </Arrow>
+        <Arrow id="D.4.6_A5" target_box_id="A5" type="Control" label="Production Plan" description="" branch_parent_id="D.4.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-183.48204236152674" label_offset_y="-148.91432785946859" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1385" y="690"/>
+                <Point x="1385" y="1110"/>
+            </Segments>
+            <JunctionPoint x="1385.0" y="690.0"/>
+        </Arrow>
+        <Arrow id="P.4.8" source_box_id="A4" type="Output" label="Sensor Data" description="" join_target_id="D.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-28.881707589001962" label_offset_y="-69.67864509076219" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1170" y="903"/>
+                <Point x="1800" y="903"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+            <JoinPoints>
+                <Point x="1800.0" y="903.3333333333334"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="D.2.1" target_box_id="A1" type="Control" label="Procedures" description="" branch_parent_id="D.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="34.24367515773639" label_offset_y="-101.10857264382267" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262" y="-10"/>
+                <Point x="262" y="150"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A2" target_box_id="A2" type="Control" label="Procedures" description="" branch_parent_id="D.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="47.58862869067298" label_offset_y="-43.06636805134906" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="272" y="0"/>
+                <Point x="552" y="0"/>
+                <Point x="552" y="390"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A3" target_box_id="A3" type="Control" label="Procedures" description="" branch_parent_id="D.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="101.89623279677107" label_offset_y="-18.280170488563726" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="272" y="0"/>
+                <Point x="850" y="0"/>
+                <Point x="850" y="630"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A4" target_box_id="A4" type="Control" label="Procedures" description="" branch_parent_id="D.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="26.00247159270748" label_offset_y="-48.65468680762166" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="272" y="0"/>
+                <Point x="1132" y="0"/>
+                <Point x="1132" y="870"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A5" target_box_id="A5" type="Control" label="Procedures" description="" branch_parent_id="D.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="41.416243368156074" label_offset_y="-44.40691379042528" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="272" y="0"/>
+                <Point x="1422" y="0"/>
+                <Point x="1422" y="1110"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A6" target_box_id="A6" type="Control" label="Procedures" description="" branch_parent_id="D.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="155.6874174961804" label_offset_y="-28.097696082683115" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="272" y="0"/>
+                <Point x="1712" y="0"/>
+                <Point x="1712" y="1350"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.4.1" source_box_id="A1" type="Output" label="CAD Model" description="" join_target_id="D.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-90.78058585637109" label_offset_y="88.22772897966615" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300" y="200"/>
+                <Point x="1810" y="200"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="370.0" y="200.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.1_A2" target_box_id="A2" type="Input" label="CAD Model" description="" branch_parent_id="D.4.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-108.3920875353669" label_offset_y="37.73640526665423" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="370" y="200"/>
+                <Point x="370" y="440"/>
+                <Point x="440" y="440"/>
+            </Segments>
+            <JunctionPoint x="370.0" y="200.0"/>
+        </Arrow>
+        <Arrow id="D.4.3" source_box_id="A2" type="Output" label="Support Design" description="" join_target_id="D.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-127.17475054564306" label_offset_y="86.59796478984197" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="590" y="457"/>
+                <Point x="1800" y="457"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="636.6666666666666" y="456.6666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.3_A3" target_box_id="A3" type="Input" label="Support Design" description="" branch_parent_id="D.4.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-126.46601986319706" label_offset_y="56.01730249334594" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="637" y="457"/>
+                <Point x="637" y="697"/>
+                <Point x="730" y="697"/>
+            </Segments>
+            <JunctionPoint x="636.6666666666666" y="456.6666666666667"/>
+        </Arrow>
+        <Arrow id="D.4.4" source_box_id="A3" type="Output" label="Build Model" description="" join_target_id="D.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-30.483866154245675" label_offset_y="-75.83909040541897" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="880" y="650"/>
+                <Point x="1800" y="650"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+        </Arrow>
+        <Arrow id="D.4.5" source_box_id="A3" type="Output" label="Slices" description="" join_target_id="D.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="76.06489147043476" label_offset_y="-54.66257826875051" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="880" y="670"/>
+                <Point x="1800" y="670"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+        </Arrow>
+        <Arrow id="D.4.7" source_box_id="A3" type="Output" label="Equipment Controls" description="" join_target_id="D.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-110.8186907405908" label_offset_y="57.51432305259755" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="880" y="710"/>
+                <Point x="1800" y="710"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="1057.5" y="710.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7_A4" target_box_id="A4" type="Control" label="Equipment Controls" description="" branch_parent_id="D.4.7" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-90.44480648203591" label_offset_y="87.43656818357033" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1058" y="710"/>
+                <Point x="1058" y="870"/>
+            </Segments>
+            <JunctionPoint x="1057.5" y="710.0"/>
+            <BranchPoints>
+                <Point x="1347.5" y="710.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7_A4_A5" target_box_id="A5" type="Control" label="Equipment Controls" description="" branch_parent_id="D.4.7_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="6.378856887163238" label_offset_y="-26.044480648203717" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1348" y="710"/>
+                <Point x="1348" y="1110"/>
+            </Segments>
+            <JunctionPoint x="1347.5" y="710.0"/>
+            <BranchPoints>
+                <Point x="1637.5" y="710.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7_A4_A5_A6" target_box_id="A6" type="Control" label="Equipment Controls" description="" branch_parent_id="D.4.7_A4_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1638" y="710"/>
+                <Point x="1638" y="1350"/>
+            </Segments>
+            <JunctionPoint x="1637.5" y="710.0"/>
+        </Arrow>
+        <Arrow id="D.4.2" source_box_id="A2" type="Output" label="Orientated Model" description="" join_target_id="D.4" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-40.74216478709366" label_offset_y="-87.89153248907422" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="590" y="423"/>
+                <Point x="1800" y="423"/>
+                <Point x="1800" y="210"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="683.3333333333334" y="423.3333333333333"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.2_A3" target_box_id="A3" type="Input" label="Orientated Model" description="" branch_parent_id="D.4.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="10.281799225112422" label_offset_y="-108.87808550973068" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="683" y="423"/>
+                <Point x="683" y="663"/>
+                <Point x="730" y="663"/>
+            </Segments>
+            <JunctionPoint x="683.3333333333334" y="423.3333333333333"/>
+        </Arrow>
+        <Arrow id="D.3.2" target_box_id="A3" type="Control" label="Process Specification" description="" branch_parent_id="D.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="101.19133111757628" label_offset_y="-63.316162733023305" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="50"/>
+                <Point x="820" y="50"/>
+                <Point x="820" y="630"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.5_A3" target_box_id="A3" type="Mechanism" label="Software" description="" branch_parent_id="D.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="1583"/>
+                <Point x="805" y="1583"/>
+                <Point x="805" y="730"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="1583.3333333333333"/>
+        </Arrow>
+        <Arrow id="P.4.8_A5" source_box_id="A5" type="Output" label="Sensor Data" description="" join_target_id="P.4.8" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1460" y="1143"/>
+                <Point x="1800" y="1143"/>
+                <Point x="1800" y="893"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="903.3333333333334"/>
+        </Arrow>
+        <Arrow id="P.4.8_A6" source_box_id="A6" type="Output" label="Sensor Data" description="" join_target_id="P.4.8" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1750" y="1383"/>
+                <Point x="1800" y="1383"/>
+                <Point x="1800" y="893"/>
+            </Segments>
+            <JunctionPoint x="1800.0" y="903.3333333333334"/>
+        </Arrow>
+        <Arrow id="D.3.3" target_box_id="A6" type="Control" label="Test Methods" description="" branch_parent_id="D.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-242.58996723701603" label_offset_y="-2.696490960527626" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235" y="50"/>
+                <Point x="1675" y="50"/>
+                <Point x="1675" y="1350"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A1" title="Decomposition of A1">
+        <Box id="A11" name="Model Part" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A12" name="Optimize Geometry" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A13" name="Format Model" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="D.5_A1" type="Mechanism" label="Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-149.1514346703733" label_offset_y="15.351072279586901" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="850.0"/>
+                <Point x="225.0" y="750.0"/>
+                <Point x="475.0" y="750.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="750.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.1_A1" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-224.39463284769727" label_offset_y="-114.63943221636248" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="-50.0"/>
+                <Point x="225.0" y="50.0"/>
+                <Point x="700.0" y="50.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="50.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.3.1" type="Control" label="Material Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-245.59408352665727" label_offset_y="-48.64075385234416" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="-50.0"/>
+                <Point x="188.0" y="100.0"/>
+                <Point x="438.0" y="100.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="187.5" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.2.1" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="61.19084594769578" label_offset_y="-62.06786879971203" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="-50.0"/>
+                <Point x="262.0" y="0.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="262.5" y="0.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.1" type="Output" label="CAD Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.1" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-13.8690582544167" label_offset_y="-68.47683915079733" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="875.0" y="600.0"/>
+                <Point x="875.0" y="200.0"/>
+                <Point x="950.0" y="200.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="875.0" y="200.0"/>
+                <Point x="875.0" y="400.0"/>
+                <Point x="875.0" y="600.0"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="D.1_A1_A11" target_box_id="A11" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="40.0"/>
+                <Point x="225.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.1_A1_A12" target_box_id="A12" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="50.0"/>
+                <Point x="475.0" y="50.0"/>
+                <Point x="475.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.1_A1_A13" target_box_id="A13" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="50.0"/>
+                <Point x="700.0" y="50.0"/>
+                <Point x="700.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.3.1_A11" target_box_id="A11" type="Control" label="Material Specification" description="" branch_parent_id="D.3.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="90.0"/>
+                <Point x="188.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="D.3.1_A12" target_box_id="A12" type="Control" label="Material Specification" description="" branch_parent_id="D.3.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="198.0" y="100.0"/>
+                <Point x="438.0" y="100.0"/>
+                <Point x="438.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="D.5_A1.1" target_box_id="A11" type="Mechanism" label="CAD Software" description="" branch_parent_id="D.5_A1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-181.88407962668788" label_offset_y="-47.34980142970602" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="760.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="750.0"/>
+            <BranchPoints>
+                <Point x="225.0" y="750.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.5_A1.2" target_box_id="A12" type="Mechanism" label="Optimization Software" description="" branch_parent_id="D.5_A1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-213.60736695790314" label_offset_y="-50.75504368546467" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="750.0"/>
+                <Point x="475.0" y="750.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="750.0"/>
+        </Arrow>
+        <Arrow id="D.5_A1.1_A13" target_box_id="A13" type="Mechanism" label="CAD Software" description="" branch_parent_id="D.5_A1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-156.00528174040824" label_offset_y="-55.41799840889166" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="750.0"/>
+                <Point x="725.0" y="750.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="750.0"/>
+        </Arrow>
+        <Arrow id="D.2.1.1" target_box_id="A11" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="9.277432726674988" label_offset_y="-47.15068055252743" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="0.0"/>
+                <Point x="262.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+            <BranchPoints>
+                <Point x="262.5" y="0.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.1.1" source_box_id="A11" type="Output" label="Product Design" description="" join_target_id="D.4.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-26.507592755211988" label_offset_y="-74.55739683272338" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="200.0"/>
+                <Point x="885.0" y="200.0"/>
+            </Segments>
+            <JunctionPoint x="875.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="350.0" y="200.0"/>
+                <Point x="616.6666666666666" y="200.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.2.1.1_A12" target_box_id="A12" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="12.088271785454936" label_offset_y="-125.41163626197545" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="0.0"/>
+                <Point x="512.0" y="0.0"/>
+                <Point x="512.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1.1_A13" target_box_id="A13" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="134.89749716489143" label_offset_y="-65.36198857934124" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="0.0"/>
+                <Point x="750.0" y="0.0"/>
+                <Point x="750.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.4.1.1_A12" target_box_id="A12" type="Input" label="Product Design" description="" branch_parent_id="D.4.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="350.0" y="200.0"/>
+                <Point x="350.0" y="400.0"/>
+                <Point x="400.0" y="400.0"/>
+            </Segments>
+            <JunctionPoint x="350.0" y="200.0"/>
+        </Arrow>
+        <Arrow id="D.4.1.1_A13" target_box_id="A13" type="Input" label="Product Design" description="" branch_parent_id="D.4.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="617.0" y="200.0"/>
+                <Point x="617.0" y="583.0"/>
+                <Point x="650.0" y="583.0"/>
+            </Segments>
+            <JunctionPoint x="616.6666666666666" y="200.0"/>
+        </Arrow>
+        <Arrow id="D.4.1.2" source_box_id="A12" type="Output" label="Optimized Model" description="" join_target_id="D.4.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-26.684377593925774" label_offset_y="-89.53057806570501" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="400.0"/>
+                <Point x="875.0" y="400.0"/>
+                <Point x="875.0" y="210.0"/>
+            </Segments>
+            <JunctionPoint x="875.0" y="200.0"/>
+            <BranchPoints>
+                <Point x="583.3333333333334" y="400.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.1.2_A13" target_box_id="A13" type="Input" label="Optimized Model" description="" branch_parent_id="D.4.1.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="583.0" y="400.0"/>
+                <Point x="583.0" y="617.0"/>
+                <Point x="650.0" y="617.0"/>
+            </Segments>
+            <JunctionPoint x="583.3333333333334" y="400.0"/>
+        </Arrow>
+        <Arrow id="D.4.1.3" source_box_id="A13" type="Output" label="Formatted Model" description="" join_target_id="D.4.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.1.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-11.60293029451816" label_offset_y="87.4246924758155" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="600.0"/>
+                <Point x="875.0" y="600.0"/>
+                <Point x="875.0" y="210.0"/>
+            </Segments>
+            <JunctionPoint x="875.0" y="200.0"/>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A2" title="Decomposition of A2">
+        <Box id="A21" name="Choose Orientation" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A22" name="Design Support Structures" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="D.5_A2" target_box_id="A21" type="Mechanism" label="Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-201.89567613185068" label_offset_y="-13.297378872120817" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="650.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="550.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.1_A2" target_box_id="A21" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-9.150116087638423" label_offset_y="-89.43192766774622" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="-50.0"/>
+                <Point x="225.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="83.33333333333334"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.3.1_A2" target_box_id="A21" type="Control" label="Material Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-216.69620885856187" label_offset_y="-83.80542308971829" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="-50.0"/>
+                <Point x="188.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1_A2" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="57.590110032392715" label_offset_y="-34.47663891247151" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="-50.0"/>
+                <Point x="262.0" y="17.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="262.5" y="16.66666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.1_A2" target_box_id="A21" type="Input" label="CAD Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.1" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-129.64559173947578" label_offset_y="-60.21699761715652" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="200.0"/>
+                <Point x="150.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.3" source_box_id="A22" type="Output" label="Support Design" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.3" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="400.0"/>
+                <Point x="700.0" y="400.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1.1" target_box_id="A21" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1_A2" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="33.775922659049286" label_offset_y="-28.4109433505253" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="17.0"/>
+                <Point x="262.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="16.66666666666667"/>
+            <BranchPoints>
+                <Point x="262.5" y="16.66666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.5_A2_A22" target_box_id="A22" type="Mechanism" label="Software" description="" branch_parent_id="D.5_A2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-156.57749909857245" label_offset_y="-21.475232474285804" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="550.0"/>
+                <Point x="475.0" y="550.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="550.0"/>
+        </Arrow>
+        <Arrow id="D.1_A2_A22" target_box_id="A22" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="60.20023022071689" label_offset_y="22.232586727143428" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="83.0"/>
+                <Point x="475.0" y="83.0"/>
+                <Point x="475.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="83.33333333333334"/>
+        </Arrow>
+        <Arrow id="D.2.1.1_A22" target_box_id="A22" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="28.859743815716456" label_offset_y="-41.710333956429" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="17.0"/>
+                <Point x="512.0" y="17.0"/>
+                <Point x="512.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="16.66666666666667"/>
+        </Arrow>
+        <Arrow id="D.4.2" source_box_id="A21" type="Output" label="Orientated Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="200.0"/>
+                <Point x="700.0" y="200.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="437.5" y="200.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.2_A22" target_box_id="A22" type="Control" label="Orientated Model" description="" branch_parent_id="D.4.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="438.0" y="200.0"/>
+                <Point x="438.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="437.5" y="200.0"/>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A3" title="Decomposition of A3">
+        <Box id="A31" name="Create Build Model" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A32" name="Develop Production Plan" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A33" name="Create Equipment Control Instructions" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="D.1_A3" target_box_id="A32" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="21.967750943208785" label_offset_y="-53.66243050039716" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="529.0" y="-50.0"/>
+                <Point x="529.0" y="350.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="528.5714285714286" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.3.1_A3" target_box_id="A31" type="Control" label="Material Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-236.67111174543294" label_offset_y="-30.285146942017498" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="-50.0"/>
+                <Point x="200.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="200.0" y="50.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.6" source_box_id="A32" type="Output" label="Production Plan" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="O3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="110.93135871289837" label_offset_y="-84.79374492533816" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="400.0"/>
+                <Point x="950.0" y="400.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="687.5" y="400.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.2.1_A3" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-19.813154727975984" label_offset_y="-60.84399219976771" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="-50.0"/>
+                <Point x="250.0" y="0.0"/>
+                <Point x="725.0" y="0.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="250.0" y="0.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.3_A3" target_box_id="A31" type="Input" label="Support Design" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.3" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-123.31056393963465" label_offset_y="-56.11755361397938" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="183.0"/>
+                <Point x="150.0" y="183.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4" source_box_id="A31" type="Output" label="Build Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.4" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-134.04286216287994" label_offset_y="-63.856720886819005" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="183.0"/>
+                <Point x="950.0" y="183.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="442.85714285714283" y="183.33333333333334"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.5" source_box_id="A31" type="Output" label="Slices" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.5" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-5.768761974940162" label_offset_y="-65.98449479868856" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="217.0"/>
+                <Point x="950.0" y="217.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="600.0" y="216.66666666666669"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7" source_box_id="A33" type="Output" label="Equipment Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" auto_icom_code="O4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-12.368546465448844" label_offset_y="-64.58776806989692" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="600.0"/>
+                <Point x="950.0" y="600.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6_A33" target_box_id="A33" type="Control" label="Production Plan" description="" branch_parent_id="D.4.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="O3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="688.0" y="400.0"/>
+                <Point x="688.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="687.5" y="400.0"/>
+        </Arrow>
+        <Arrow id="D.4.5_A33" target_box_id="A33" type="Input" label="Slices" description="" branch_parent_id="D.4.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.5" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="600.0" y="217.0"/>
+                <Point x="600.0" y="583.0"/>
+                <Point x="650.0" y="583.0"/>
+            </Segments>
+            <JunctionPoint x="600.0" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="D.4.4_A32" target_box_id="A32" type="Control" label="Build Model" description="" branch_parent_id="D.4.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="443.0" y="183.0"/>
+                <Point x="443.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="442.85714285714283" y="183.33333333333334"/>
+        </Arrow>
+        <Arrow id="D.4.2_A3" target_box_id="A33" type="Input" label="Orientated Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" auto_icom_code="I2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-148.13661636219223" label_offset_y="63.08816521048442" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="217.0"/>
+                <Point x="50.0" y="217.0"/>
+                <Point x="50.0" y="617.0"/>
+                <Point x="650.0" y="617.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="50.0" y="216.66666666666669"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.2_A3_A31" target_box_id="A31" type="Input" label="Orientated Model" description="" branch_parent_id="D.4.2_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" auto_icom_code="I2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-373.8173153296267" label_offset_y="-39.41223193010322" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="40.0" y="217.0"/>
+                <Point x="150.0" y="217.0"/>
+            </Segments>
+            <JunctionPoint x="50.0" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="D.4.2_A3_A32" target_box_id="A32" type="Control" label="Orientated Model" description="" branch_parent_id="D.4.2_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" auto_icom_code="I2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="40.0" y="217.0"/>
+                <Point x="100.0" y="217.0"/>
+                <Point x="100.0" y="300.0"/>
+                <Point x="421.0" y="300.0"/>
+                <Point x="421.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="50.0" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="D.3.1_A3_A32" target_box_id="A32" type="Control" label="Material Specification" description="" branch_parent_id="D.3.1_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="50.0"/>
+                <Point x="464.0" y="50.0"/>
+                <Point x="464.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.2.1.1" target_box_id="A31" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1_A3" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="24.690633687450372" label_offset_y="-47.36854646544877" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="-10.0"/>
+                <Point x="250.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A3_A32" target_box_id="A32" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="260.0" y="0.0"/>
+                <Point x="486.0" y="0.0"/>
+                <Point x="486.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A3_A33" target_box_id="A33" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="260.0" y="0.0"/>
+                <Point x="725.0" y="0.0"/>
+                <Point x="725.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.1_A3_A33" target_box_id="A33" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="529.0" y="100.0"/>
+                <Point x="762.0" y="100.0"/>
+                <Point x="762.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="528.5714285714286" y="100.0"/>
+        </Arrow>
+        <Arrow id="D.3.2" target_box_id="A32" type="Control" label="Process Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.2" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-193.86461229150115" label_offset_y="-36.57903097696583" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="507.0" y="-50.0"/>
+                <Point x="507.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5_A3" type="Mechanism" label="Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-134.10581835506358" label_offset_y="-23.304179407866172" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="850.0"/>
+                <Point x="225.0" y="750.0"/>
+                <Point x="725.0" y="750.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="750.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.5.3" target_box_id="A31" type="Mechanism" label="AM Software" description="" branch_parent_id="D.5_A3" tunnel_source="false" tunnel_target="false" icom_code="D.5.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-151.3566299559376" label_offset_y="1.6083588157324016" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="760.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="750.0"/>
+        </Arrow>
+        <Arrow id="D.5.4" target_box_id="A32" type="Mechanism" label="CAPP Software" description="" branch_parent_id="D.5_A3" tunnel_source="false" tunnel_target="false" icom_code="D.5.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-166.29281026292983" label_offset_y="-37.14447842097661" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="750.0"/>
+                <Point x="475.0" y="750.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="750.0"/>
+        </Arrow>
+        <Arrow id="D.5.5" target_box_id="A33" type="Mechanism" label="CAM Software" description="" branch_parent_id="D.5_A3" tunnel_source="false" tunnel_target="false" icom_code="D.5.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-150.47676035069333" label_offset_y="-37.144478420976725" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="750.0"/>
+                <Point x="725.0" y="750.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="750.0"/>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A4" title="Decomposition of A4">
+        <Box id="A41" name="Create Powder Layer" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A42" name="Fuse Powder Layer" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A43" name="Monitor AM Process" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A44" name="Recondition Powder" description="" x="900.0" y="750.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="P.1_A4" target_box_id="A41" type="Input" label="Feedstock Material" description="" tunnel_source="false" tunnel_target="false" icom_code="P.1" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-122.77760063996729" label_offset_y="-71.104045156052" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="183.0"/>
+                <Point x="150.0" y="183.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="P.3_A4" type="Mechanism" label="Equipment" description="" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-131.258178042242" label_offset_y="-16.005476060845012" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="1050.0"/>
+                <Point x="225.0" y="917.0"/>
+                <Point x="975.0" y="917.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="916.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.2" type="Output" label="AM Build" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.2" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-43.23751268008709" label_offset_y="-86.67863598585421" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1100.0" y="383.0"/>
+                <Point x="1200.0" y="383.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="1100.0" y="383.3333333333333"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="D.4.6_A4" type="Control" label="Production Plan" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-195.6719243436646" label_offset_y="-51.50500774477524" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="-50.0"/>
+                <Point x="200.0" y="83.0"/>
+                <Point x="700.0" y="83.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="200.0" y="83.33333333333334"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.4.8" source_box_id="A43" type="Output" label="Sensor Data" description="" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-15.111484323565719" label_offset_y="-81.69984556540521" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="600.0"/>
+                <Point x="1200.0" y="600.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="1150.0" y="783.3333333333334"/>
+                <Point x="1150.0" y="600.0"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="D.2.1_A4" target_box_id="A41" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="50.66730073271094" label_offset_y="-45.889438888162516" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="-50.0"/>
+                <Point x="250.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="250.0" y="16.66666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7_A4" target_box_id="A42" type="Control" label="Equipment Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="99.86511389661007" label_offset_y="-36.128514281271805" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="438.0" y="-50.0"/>
+                <Point x="438.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1_A4_A42" target_box_id="A42" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="17.0"/>
+                <Point x="512.0" y="17.0"/>
+                <Point x="512.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="16.66666666666667"/>
+        </Arrow>
+        <Arrow id="D.2.1_A4_A43" target_box_id="A43" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="17.0"/>
+                <Point x="750.0" y="17.0"/>
+                <Point x="750.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="16.66666666666667"/>
+        </Arrow>
+        <Arrow id="D.2.1_A4_A44" target_box_id="A44" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="17.0"/>
+                <Point x="1000.0" y="17.0"/>
+                <Point x="1000.0" y="750.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="16.66666666666667"/>
+        </Arrow>
+        <Arrow id="P.3_A4.1" target_box_id="A41" type="Mechanism" label="PBF Machine" description="" branch_parent_id="P.3_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-231.96663389658795" label_offset_y="-22.038332425913893" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="927.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="916.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3_A4.1_A42" target_box_id="A42" type="Mechanism" label="PBF Machine" description="" branch_parent_id="P.3_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-182.71054035941216" label_offset_y="-30.911040508339852" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="917.0"/>
+                <Point x="475.0" y="917.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="916.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3_A4.1_A43" target_box_id="A43" type="Mechanism" label="PBF Machine" description="" branch_parent_id="P.3_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-180.72166029586958" label_offset_y="-55.77204130262123" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="917.0"/>
+                <Point x="725.0" y="917.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="916.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3_A4.2" target_box_id="A44" type="Mechanism" label="Powder Equipment" description="" branch_parent_id="P.3_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-29.63779479423806" label_offset_y="75.92165998328107" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="235.0" y="917.0"/>
+                <Point x="975.0" y="917.0"/>
+                <Point x="975.0" y="850.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="916.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.4.8_A44" source_box_id="A44" type="Output" label="Sensor Data" description="" join_target_id="P.4.8" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="56.32734799891182" label_offset_y="13.558876694232936" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1050.0" y="783.0"/>
+                <Point x="1150.0" y="783.0"/>
+                <Point x="1150.0" y="600.0"/>
+            </Segments>
+            <JunctionPoint x="1150.0" y="600.0"/>
+        </Arrow>
+        <Arrow id="D.4.6.3" target_box_id="A41" type="Control" label="Process Parameters" description="" branch_parent_id="D.4.6_A4" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-215.77207930291092" label_offset_y="-58.332994769408586" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="73.0"/>
+                <Point x="200.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="83.33333333333334"/>
+            <BranchPoints>
+                <Point x="200.0" y="83.33333333333334"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.6.3_A42" target_box_id="A42" type="Control" label="Process Parameters" description="" branch_parent_id="D.4.6.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="51.09000053252703" label_offset_y="-127.80758600770153" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="83.0"/>
+                <Point x="475.0" y="83.0"/>
+                <Point x="475.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="83.33333333333334"/>
+        </Arrow>
+        <Arrow id="D.4.6.3_A44" target_box_id="A44" type="Control" label="Process Parameters" description="" branch_parent_id="D.4.6.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="74.43069555749798" label_offset_y="-135.4627395241955" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="83.0"/>
+                <Point x="950.0" y="83.0"/>
+                <Point x="950.0" y="750.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="83.33333333333334"/>
+        </Arrow>
+        <Arrow id="D.4.6_A4_A43" target_box_id="A43" type="Control" label="Production Plan" description="" branch_parent_id="D.4.6_A4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="83.0"/>
+                <Point x="700.0" y="83.0"/>
+                <Point x="700.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="83.33333333333334"/>
+        </Arrow>
+        <Arrow id="P.2.4" source_box_id="A44" target_box_id="A41" type="Input" label="Reconditioned Powder" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="84.01562421012045" label_offset_y="-8.837332200935634" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="1050.0" y="817.0"/>
+                <Point x="1100.0" y="817.0"/>
+                <Point x="1100.0" y="983.0"/>
+                <Point x="75.0" y="983.0"/>
+                <Point x="75.0" y="217.0"/>
+                <Point x="150.0" y="217.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="P.2.2.1" source_box_id="A42" type="Output" label="Fused Powder" description="" join_target_id="P.2.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-27.852026309160124" label_offset_y="-114.12896748216195" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="383.0"/>
+                <Point x="1100.0" y="383.0"/>
+            </Segments>
+            <JunctionPoint x="1100.0" y="383.3333333333333"/>
+            <BranchPoints>
+                <Point x="583.3333333333334" y="383.3333333333333"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.2.1_A43" target_box_id="A43" type="Input" label="Fused Powder" description="" branch_parent_id="P.2.2.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="583.0" y="383.0"/>
+                <Point x="583.0" y="617.0"/>
+                <Point x="650.0" y="617.0"/>
+            </Segments>
+            <JunctionPoint x="583.3333333333334" y="383.3333333333333"/>
+        </Arrow>
+        <Arrow id="P.2.3" source_box_id="A42" target_box_id="A44" type="Input" label="Unfused Powder" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="56.27155091759346" label_offset_y="-130.1442826392518" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="417.0"/>
+                <Point x="850.0" y="417.0"/>
+                <Point x="850.0" y="800.0"/>
+                <Point x="900.0" y="800.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="P.2.1" source_box_id="A41" target_box_id="A42" type="Output" label="Powder Layer" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-19.309321014630257" label_offset_y="-83.24294522751703" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="200.0"/>
+                <Point x="350.0" y="200.0"/>
+                <Point x="350.0" y="400.0"/>
+                <Point x="400.0" y="400.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="333.3333333333333" y="200.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.1_A43" target_box_id="A43" type="Input" label="Powder Layer" description="" branch_parent_id="P.2.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="333.0" y="200.0"/>
+                <Point x="617.0" y="200.0"/>
+                <Point x="617.0" y="583.0"/>
+                <Point x="650.0" y="583.0"/>
+            </Segments>
+            <JunctionPoint x="333.3333333333333" y="200.0"/>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A31" title="Decomposition of A31">
+        <Box id="A311" name="Place Design" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A312" name="Generate Support Structure" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A313" name="Slice Build" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="D.3.1_A3" target_box_id="A311" type="Control" label="Material Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-218.9268702839555" label_offset_y="6.467831612390789" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="-50.0"/>
+                <Point x="200.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.3_A3" target_box_id="A312" type="Input" label="Support Design" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="400.0"/>
+                <Point x="400.0" y="400.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4" type="Output" label="Build Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-23.158061953931565" label_offset_y="-69.9825258141382" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="875.0" y="400.0"/>
+                <Point x="875.0" y="200.0"/>
+                <Point x="950.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.5" source_box_id="A313" type="Output" label="Slices" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="2.0174741858619427" label_offset_y="-56.49563145353443" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="600.0"/>
+                <Point x="950.0" y="600.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.2_A3_A31" target_box_id="A311" type="Input" label="Orientated Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-19.974583002382857" label_offset_y="-72.7275615567911" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="200.0"/>
+                <Point x="150.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1.1" target_box_id="A311" type="Control" label="Design Guidelines" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="62.72717062152503" label_offset_y="-3.8959491660047547" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="-50.0"/>
+                <Point x="250.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1.1_A312" target_box_id="A312" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="63.0"/>
+                <Point x="500.0" y="63.0"/>
+                <Point x="500.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1.1_A313" target_box_id="A313" type="Control" label="Design Guidelines" description="" branch_parent_id="D.2.1.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="63.0"/>
+                <Point x="725.0" y="63.0"/>
+                <Point x="725.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.3" target_box_id="A311" type="Mechanism" label="AM Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-153.44527526806993" label_offset_y="-25.789515488482948" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="850.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.3_A312" target_box_id="A312" type="Mechanism" label="AM Software" description="" branch_parent_id="D.5.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="758.0"/>
+                <Point x="475.0" y="758.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.3_A313" target_box_id="A313" type="Mechanism" label="AM Software" description="" branch_parent_id="D.5.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="758.0"/>
+                <Point x="725.0" y="758.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4.1" source_box_id="A311" type="Output" label="Located Design" description="" join_target_id="D.4.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-57.324861000794385" label_offset_y="-79.87291501191424" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="200.0"/>
+                <Point x="875.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4.2" source_box_id="A312" type="Output" label="Support Structures" description="" join_target_id="D.4.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="147.67593328038106" label_offset_y="46.00476568705312" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="400.0"/>
+                <Point x="875.0" y="400.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4.1_A312" target_box_id="A312" type="Control" label="Located Design" description="" branch_parent_id="D.4.4.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="350.0" y="200.0"/>
+                <Point x="450.0" y="200.0"/>
+                <Point x="450.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4.1_A313" target_box_id="A313" type="Input" label="Located Design" description="" branch_parent_id="D.4.4.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="583.0" y="200.0"/>
+                <Point x="583.0" y="583.0"/>
+                <Point x="650.0" y="583.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4.2_A313" target_box_id="A313" type="Input" label="Support Structures" description="" branch_parent_id="D.4.4.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="617.0" y="400.0"/>
+                <Point x="617.0" y="617.0"/>
+                <Point x="650.0" y="617.0"/>
+            </Segments>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A32" title="Decomposition of A32">
+        <Box id="A321" name="Determine Process Route" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A322" name="Assign Resources" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A323" name="Define Process Parameters" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="D.1_A3" target_box_id="A321" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="D.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="40.27139114442758" label_offset_y="-112.05318079981942" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="257.0" y="-50.0"/>
+                <Point x="257.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6" type="Output" label="Production Plan" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-64.49335740219578" label_offset_y="-90.8212723199278" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="875.0" y="600.0"/>
+                <Point x="875.0" y="200.0"/>
+                <Point x="950.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.4_A32" target_box_id="A321" type="Control" label="Build Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-51.96115480712902" label_offset_y="-152.0162552468038" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="236.0" y="-50.0"/>
+                <Point x="236.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.2_A3_A32" target_box_id="A321" type="Control" label="Orientated Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-153.40217896343802" label_offset_y="-122.32939994332978" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="214.0" y="-50.0"/>
+                <Point x="214.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.3.1_A3_A32" target_box_id="A321" type="Control" label="Material Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-220.33485818921633" label_offset_y="-85.79173187751536" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="193.0" y="-50.0"/>
+                <Point x="193.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1_A3_A32" target_box_id="A321" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-223.71702599269054" label_offset_y="-58.38848082815455" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="171.0" y="-50.0"/>
+                <Point x="171.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.3.2" target_box_id="A321" type="Control" label="Process Specification" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="170.95170889123153" label_offset_y="-91.50074251279887" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="279.0" y="-50.0"/>
+                <Point x="279.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.4" target_box_id="A321" type="Mechanism" label="CAPP Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-195.77075367276274" label_offset_y="-17.28360425411347" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="850.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.4_A322" target_box_id="A322" type="Mechanism" label="CAPP Software" description="" branch_parent_id="D.5.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="758.0"/>
+                <Point x="475.0" y="758.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.4_A323" target_box_id="A323" type="Mechanism" label="CAPP Software" description="" branch_parent_id="D.5.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="758.0"/>
+                <Point x="725.0" y="758.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.1_A3_A323" target_box_id="A323" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="257.0" y="87.0"/>
+                <Point x="688.0" y="87.0"/>
+                <Point x="688.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.3.2_A323" target_box_id="A323" type="Control" label="Process Specification" description="" branch_parent_id="D.3.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="279.0" y="34.0"/>
+                <Point x="725.0" y="34.0"/>
+                <Point x="725.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.1" source_box_id="A321" type="Output" label="Process Route" description="" join_target_id="D.4.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="29.13441701645354" label_offset_y="-78.26144892230408" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="200.0"/>
+                <Point x="875.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.1_A322" target_box_id="A322" type="Control" label="Process Route" description="" branch_parent_id="D.4.6.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="350.0" y="200.0"/>
+                <Point x="475.0" y="200.0"/>
+                <Point x="475.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.2" source_box_id="A322" type="Output" label="Production Resources" description="" join_target_id="D.4.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-73.62777441864944" label_offset_y="-98.81388720932478" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="400.0"/>
+                <Point x="875.0" y="400.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.2_A323" target_box_id="A323" type="Control" label="Production Resources" description="" branch_parent_id="D.4.6.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="600.0" y="400.0"/>
+                <Point x="762.0" y="400.0"/>
+                <Point x="762.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.3" source_box_id="A323" type="Output" label="Process Parameters" description="" join_target_id="D.4.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="2.8729680941495417" label_offset_y="53.04579568921645" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="600.0"/>
+                <Point x="875.0" y="600.0"/>
+            </Segments>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A33" title="Decomposition of A33">
+        <Box id="A331" name="Generate Scan Strategy" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A332" name="Generate Machining Toolpaths" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A333" name="Generate Inspection Routines" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="D.4.7" type="Output" label="Equipment Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-40.24146147736303" label_offset_y="-79.87291501191422" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="875.0" y="600.0"/>
+                <Point x="875.0" y="200.0"/>
+                <Point x="950.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6_A33" type="Control" label="Production Plan" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-8.93755584789514" label_offset_y="-65.35107227958697" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="-50.0"/>
+                <Point x="250.0" y="11.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.5_A33" target_box_id="A331" type="Input" label="Slices" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-71.08010536221589" label_offset_y="-63.515875390624956" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="200.0"/>
+                <Point x="150.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.2_A3" target_box_id="A332" type="Input" label="Orientated Model" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-93.0649583806818" label_offset_y="-75.03175078125008" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="400.0"/>
+                <Point x="400.0" y="400.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1_A3_A33" target_box_id="A331" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-149.22583647736298" label_offset_y="-17.697378872120737" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="-50.0"/>
+                <Point x="200.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.1_A3_A33" target_box_id="A332" type="Control" label="Design Requirements" description="" tunnel_source="false" tunnel_target="false" icom_code="C3" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-89.52390910444797" label_offset_y="-46.46942017474186" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="512.0" y="-50.0"/>
+                <Point x="512.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.5" target_box_id="A331" type="Mechanism" label="CAM Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-155.5872122159091" label_offset_y="-31.750364204545576" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="850.0"/>
+                <Point x="225.0" y="250.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.5_A332" target_box_id="A332" type="Mechanism" label="CAM Software" description="" branch_parent_id="D.5.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="758.0"/>
+                <Point x="475.0" y="758.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.5.5_A333" target_box_id="A333" type="Mechanism" label="CAM Software" description="" branch_parent_id="D.5.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="758.0"/>
+                <Point x="725.0" y="758.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.2_A3_A333" target_box_id="A333" type="Input" label="Orientated Model" description="" branch_parent_id="D.4.2_A3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="67.0" y="400.0"/>
+                <Point x="67.0" y="600.0"/>
+                <Point x="650.0" y="600.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1_A3_A33_A332" target_box_id="A332" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A3_A33" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="42.0"/>
+                <Point x="438.0" y="42.0"/>
+                <Point x="438.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.2.1_A3_A33_A333" target_box_id="A333" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A3_A33" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="42.0"/>
+                <Point x="688.0" y="42.0"/>
+                <Point x="688.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.1_A3_A33_A333" target_box_id="A333" type="Control" label="Design Requirements" description="" branch_parent_id="D.1_A3_A33" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.1" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="512.0" y="74.0"/>
+                <Point x="762.0" y="74.0"/>
+                <Point x="762.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.2_A323" target_box_id="A331" type="Control" label="Production Resources" description="" branch_parent_id="D.4.6_A33" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="3.438008089680409" label_offset_y="-56.580367567209265" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="11.0"/>
+                <Point x="250.0" y="150.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.2_A323_A332" target_box_id="A332" type="Control" label="Production Resources" description="" branch_parent_id="D.4.6.2_A323" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="11.0"/>
+                <Point x="475.0" y="11.0"/>
+                <Point x="475.0" y="350.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6.2_A323_A333" target_box_id="A333" type="Control" label="Production Resources" description="" branch_parent_id="D.4.6.2_A323" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="11.0"/>
+                <Point x="725.0" y="11.0"/>
+                <Point x="725.0" y="550.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.7.1" source_box_id="A331" type="Output" label="Scan Strategy" description="" join_target_id="D.4.7" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-36.64495631453542" label_offset_y="-70.88165210484513" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="200.0"/>
+                <Point x="875.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.7.2" source_box_id="A332" type="Output" label="Machining Toolpath" description="" join_target_id="D.4.7" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-195.7903097696585" label_offset_y="-87.06592533756952" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="400.0"/>
+                <Point x="875.0" y="400.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.7.3" source_box_id="A333" type="Output" label="Inspection Routine" description="" join_target_id="D.4.7" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-4.27640984908669" label_offset_y="43.30738681493233" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="600.0"/>
+                <Point x="875.0" y="600.0"/>
+            </Segments>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A5" title="Decomposition of A5">
+        <Box id="A51" name="Process Build" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A52" name="Customize Metallurgy" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A53" name="Improve Workpiece Geometry" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="P.3_A5" type="Mechanism" label="Equipment" description="" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-125.27031622319302" label_offset_y="10.903097696584723" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="850.0"/>
+                <Point x="200.0" y="717.0"/>
+                <Point x="688.0" y="717.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="200.0" y="716.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.5" type="Output" label="Manufactured Part" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.5" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="6.811127633224942" label_offset_y="53.04714459387253" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="920.0" y="617.0"/>
+                <Point x="920.0" y="217.0"/>
+                <Point x="950.0" y="217.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="920.0" y="216.66666666666669"/>
+                <Point x="920.0" y="416.6666666666667"/>
+                <Point x="920.0" y="616.6666666666666"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="P.2.2_A5" target_box_id="A51" type="Input" label="AM Build" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.2" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-85.2835583796664" label_offset_y="-71.21842732327244" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="200.0"/>
+                <Point x="150.0" y="200.0"/>
+            </Segments>
+        </Arrow>
+        <Arrow id="D.4.6_A5" target_box_id="A51" type="Control" label="Production Plan" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-170.8374764197776" label_offset_y="-88.53137410643365" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="-50.0"/>
+                <Point x="225.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="0.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.2.1_A5" target_box_id="A51" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-181.73417642970608" label_offset_y="-54.2724384432089" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="-50.0"/>
+                <Point x="188.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="187.5" y="50.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7_A4_A5" type="Control" label="Equipment Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-25.73920274027006" label_offset_y="-74.32644956314537" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="-50.0"/>
+                <Point x="262.0" y="100.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="262.5" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.3.3" target_box_id="A51" type="Mechanism" label="Cleaning Equipment" description="" branch_parent_id="P.3_A5" tunnel_source="false" tunnel_target="false" icom_code="P.3.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-224.25762207445848" label_offset_y="-38.57861744506579" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="727.0"/>
+                <Point x="200.0" y="250.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+            <BranchPoints>
+                <Point x="200.0" y="716.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.3.4" target_box_id="A51" type="Mechanism" label="Cutting Equipment" description="" branch_parent_id="P.3_A5" tunnel_source="false" tunnel_target="false" icom_code="P.3.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-211.48073330420493" label_offset_y="23.78729486064117" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="717.0"/>
+                <Point x="250.0" y="717.0"/>
+                <Point x="250.0" y="250.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+            <BranchPoints>
+                <Point x="200.0" y="716.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.3.5" target_box_id="A52" type="Mechanism" label="Heat Treament Equipment" description="" branch_parent_id="P.3_A5" tunnel_source="false" tunnel_target="false" icom_code="P.3.5" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-222.69124969007902" label_offset_y="16.363308878221346" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="717.0"/>
+                <Point x="475.0" y="717.0"/>
+                <Point x="475.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3.6" target_box_id="A53" type="Mechanism" label="Finishing Equipment" description="" branch_parent_id="P.3_A5" tunnel_source="false" tunnel_target="false" icom_code="P.3.6" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-179.03007021506266" label_offset_y="10.10799511192181" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="717.0"/>
+                <Point x="688.0" y="717.0"/>
+                <Point x="688.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3.3_A53" target_box_id="A53" type="Mechanism" label="Cleaning Equipment" description="" branch_parent_id="P.3.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-179.2812131623716" label_offset_y="60.308160907865386" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="717.0"/>
+                <Point x="725.0" y="717.0"/>
+                <Point x="725.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3.4_A53" target_box_id="A53" type="Mechanism" label="Cutting Equipment" description="" branch_parent_id="P.3.4" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.4" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-13.931832964095975" label_offset_y="58.66131383822051" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="717.0"/>
+                <Point x="762.0" y="717.0"/>
+                <Point x="762.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="D.2.1_A5_A52" target_box_id="A52" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="50.0"/>
+                <Point x="450.0" y="50.0"/>
+                <Point x="450.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A5_A53" target_box_id="A53" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="50.0"/>
+                <Point x="725.0" y="50.0"/>
+                <Point x="725.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.4.6_A5_A52" target_box_id="A52" type="Control" label="Production Plan" description="" branch_parent_id="D.4.6_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="0.0"/>
+                <Point x="500.0" y="0.0"/>
+                <Point x="500.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.4.6_A5_A53" target_box_id="A53" type="Control" label="Production Plan" description="" branch_parent_id="D.4.6_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.6" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="0.0"/>
+                <Point x="762.0" y="0.0"/>
+                <Point x="762.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.4.7.2" target_box_id="A51" type="Control" label="Machining Toolpath" description="" branch_parent_id="D.4.7_A4_A5" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="19.872356128803574" label_offset_y="-63.550486694370804" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="100.0"/>
+                <Point x="262.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="100.0"/>
+            <BranchPoints>
+                <Point x="262.5" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7.2_A53" target_box_id="A53" type="Control" label="Machining Toolpath" description="" branch_parent_id="D.4.7.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-171.88420142251437" label_offset_y="-11.18843453426041" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="100.0"/>
+                <Point x="688.0" y="100.0"/>
+                <Point x="688.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="P.4.8_A5" source_box_id="A51" type="Output" label="Sensor Data" description="" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-98.38038750070211" label_offset_y="-85.28077997275852" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="183.0"/>
+                <Point x="950.0" y="183.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="845.0" y="383.3333333333333"/>
+                <Point x="845.0" y="583.3333333333334"/>
+                <Point x="845.0" y="183.33333333333334"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="P.4.8_A5_A52" source_box_id="A52" type="Output" label="Sensor Data" description="" join_target_id="P.4.8_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="81.58338711278782" label_offset_y="51.84670373312156" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="383.0"/>
+                <Point x="845.0" y="383.0"/>
+                <Point x="845.0" y="183.0"/>
+            </Segments>
+            <JunctionPoint x="845.0" y="183.33333333333334"/>
+        </Arrow>
+        <Arrow id="P.4.8_A5_A53" source_box_id="A53" type="Output" label="Sensor Data" description="" join_target_id="P.4.8_A5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="86.59688989277197" label_offset_y="59.36695790309773" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="583.0"/>
+                <Point x="845.0" y="583.0"/>
+                <Point x="845.0" y="183.0"/>
+            </Segments>
+            <JunctionPoint x="845.0" y="183.33333333333334"/>
+        </Arrow>
+        <Arrow id="P.2.5.1" source_box_id="A51" type="Output" label="As-Built Workpiece" description="" join_target_id="P.2.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-13.559542318933552" label_offset_y="-88.9136757049009" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="217.0"/>
+                <Point x="930.0" y="217.0"/>
+            </Segments>
+            <JunctionPoint x="920.0" y="216.66666666666669"/>
+            <BranchPoints>
+                <Point x="333.3333333333333" y="216.66666666666669"/>
+                <Point x="616.6666666666666" y="216.66666666666669"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.5.1_A52" target_box_id="A52" type="Input" label="As-Built Workpiece" description="" branch_parent_id="P.2.5.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="333.0" y="217.0"/>
+                <Point x="333.0" y="383.0"/>
+                <Point x="400.0" y="383.0"/>
+            </Segments>
+            <JunctionPoint x="333.3333333333333" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="P.2.5.1_A53" target_box_id="A53" type="Input" label="As-Built Workpiece" description="" branch_parent_id="P.2.5.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="617.0" y="217.0"/>
+                <Point x="617.0" y="583.0"/>
+                <Point x="650.0" y="583.0"/>
+            </Segments>
+            <JunctionPoint x="616.6666666666666" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="P.2.5.2" source_box_id="A52" type="Output" label="Treated Workpiece" description="" join_target_id="P.2.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-35.0416360376455" label_offset_y="-111.24734067218026" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="417.0"/>
+                <Point x="920.0" y="417.0"/>
+                <Point x="920.0" y="227.0"/>
+            </Segments>
+            <JunctionPoint x="920.0" y="216.66666666666669"/>
+            <BranchPoints>
+                <Point x="583.3333333333334" y="416.6666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.5.2_A53" target_box_id="A53" type="Input" label="Treated Workpiece" description="" branch_parent_id="P.2.5.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="583.0" y="417.0"/>
+                <Point x="583.0" y="617.0"/>
+                <Point x="650.0" y="617.0"/>
+            </Segments>
+            <JunctionPoint x="583.3333333333334" y="416.6666666666667"/>
+        </Arrow>
+        <Arrow id="P.2.5.3" source_box_id="A53" type="Output" label="Finished Workpiece" description="" join_target_id="P.2.5" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="68.66275465082731" label_offset_y="68.0259885772399" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="617.0"/>
+                <Point x="920.0" y="617.0"/>
+                <Point x="920.0" y="227.0"/>
+            </Segments>
+            <JunctionPoint x="920.0" y="216.66666666666669"/>
+            <BranchPoints>
+                <Point x="870.0" y="616.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.5.3_A52" target_box_id="A52" type="Input" label="Finished Workpiece" description="" branch_parent_id="P.2.5.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="870.0" y="617.0"/>
+                <Point x="890.0" y="617.0"/>
+                <Point x="890.0" y="783.0"/>
+                <Point x="367.0" y="783.0"/>
+                <Point x="367.0" y="417.0"/>
+                <Point x="400.0" y="417.0"/>
+            </Segments>
+            <JunctionPoint x="870.0" y="616.6666666666666"/>
+        </Arrow>
+    </Diagram>
+    <Diagram node_number="A6" title="Decomposition of A6">
+        <Box id="A61" name="Dimensional Metrology" description="" x="150.0" y="150.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A62" name="Non-Destructive Evaluation" description="" x="400.0" y="350.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Box id="A63" name="Perform Material Testing" description="" x="650.0" y="550.0" width="150.0" height="100.0" font_family="Arial" font_size="10" font_bold="false" font_italic="false" color="#ffffff"/>
+        <Arrow id="P.3_A6" type="Mechanism" label="Equipment" description="" tunnel_source="false" tunnel_target="false" icom_code="P.3" auto_icom_code="M1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-142.00110935110774" label_offset_y="28.304598296364702" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="850.0"/>
+                <Point x="200.0" y="717.0"/>
+                <Point x="700.0" y="717.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="200.0" y="716.6666666666666"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.5_A6" target_box_id="A61" type="Mechanism" label="Software" description="" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="66.24640270881889" label_offset_y="-2.4555221094858553" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="850.0"/>
+                <Point x="250.0" y="250.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="250.0" y="783.3333333333334"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.6" type="Output" label="Evaluated Part" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.6" auto_icom_code="O2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-5.792923893421971" label_offset_y="66.78503112255424" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="900.0" y="617.0"/>
+                <Point x="900.0" y="217.0"/>
+                <Point x="950.0" y="217.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="900.0" y="216.66666666666669"/>
+                <Point x="900.0" y="416.6666666666667"/>
+                <Point x="900.0" y="616.6666666666666"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="P.2.5_A6" target_box_id="A61" type="Input" label="Manufactured Part" description="" tunnel_source="false" tunnel_target="false" icom_code="P.2.5" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-195.25721481487858" label_offset_y="-40.61516940959257" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="0.0" y="183.0"/>
+                <Point x="150.0" y="183.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="50.0" y="183.33333333333334"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.2.1_A6" target_box_id="A61" type="Control" label="Procedures" description="" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-95.31096605815213" label_offset_y="-58.40594528583408" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="-50.0"/>
+                <Point x="225.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="225.0" y="50.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7_A4_A5_A6" type="Control" label="Equipment Controls" description="" tunnel_source="false" tunnel_target="false" icom_code="D.4.7" auto_icom_code="C1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-202.82430714015914" label_offset_y="-22.96226904671971" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="-50.0"/>
+                <Point x="188.0" y="100.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="187.5" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.4.8_A6" source_box_id="A61" type="Output" label="Sensor Data" description="" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-83.38818247522033" label_offset_y="-63.96226904671968" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="183.0"/>
+                <Point x="950.0" y="183.0"/>
+            </Segments>
+            <JoinPoints>
+                <Point x="850.0" y="383.3333333333333"/>
+                <Point x="850.0" y="583.3333333333334"/>
+                <Point x="850.0" y="183.33333333333334"/>
+            </JoinPoints>
+        </Arrow>
+        <Arrow id="P.2.5_A6_A62" target_box_id="A62" type="Input" label="Manufactured Part" description="" branch_parent_id="P.2.5_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.5" auto_icom_code="I1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="50.0" y="183.0"/>
+                <Point x="50.0" y="417.0"/>
+                <Point x="400.0" y="417.0"/>
+            </Segments>
+            <JunctionPoint x="50.0" y="183.33333333333334"/>
+        </Arrow>
+        <Arrow id="D.4.7.3" target_box_id="A61" type="Control" label="Inspection Routine" description="" branch_parent_id="D.4.7_A4_A5_A6" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-241.91309915787951" label_offset_y="-36.04760099302578" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="100.0"/>
+                <Point x="188.0" y="150.0"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+            <BranchPoints>
+                <Point x="187.5" y="100.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.4.7.3_A62" target_box_id="A62" type="Control" label="Inspection Routine" description="" branch_parent_id="D.4.7.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.4.7.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-189.6666041350676" label_offset_y="15.548631954977509" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="188.0" y="100.0"/>
+                <Point x="438.0" y="100.0"/>
+                <Point x="438.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="187.5" y="100.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A6_A62" target_box_id="A62" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="50.0"/>
+                <Point x="475.0" y="50.0"/>
+                <Point x="475.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.2.1_A6_A63" target_box_id="A63" type="Control" label="Procedures" description="" branch_parent_id="D.2.1_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.2.1" auto_icom_code="C2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="225.0" y="50.0"/>
+                <Point x="700.0" y="50.0"/>
+                <Point x="700.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="225.0" y="50.0"/>
+        </Arrow>
+        <Arrow id="D.3.3" target_box_id="A61" type="Control" label="Test Methods" description="" tunnel_source="false" tunnel_target="false" icom_code="D.3.3" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="34.721766654075964" label_offset_y="-52.013493874467585" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="-50.0"/>
+                <Point x="262.0" y="150.0"/>
+            </Segments>
+            <BranchPoints>
+                <Point x="262.5" y="0.0"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="D.3.3_A62" target_box_id="A62" type="Control" label="Test Methods" description="" branch_parent_id="D.3.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.3" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="0.0"/>
+                <Point x="512.0" y="0.0"/>
+                <Point x="512.0" y="350.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="D.3.3_A63" target_box_id="A63" type="Control" label="Test Methods" description="" branch_parent_id="D.3.3" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.3.3" auto_icom_code="C3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="262.0" y="0.0"/>
+                <Point x="750.0" y="0.0"/>
+                <Point x="750.0" y="550.0"/>
+            </Segments>
+            <JunctionPoint x="262.5" y="0.0"/>
+        </Arrow>
+        <Arrow id="P.4.8_A6_A62" source_box_id="A62" type="Output" label="Sensor Data" description="" join_target_id="P.4.8_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="383.0"/>
+                <Point x="850.0" y="383.0"/>
+                <Point x="850.0" y="183.0"/>
+            </Segments>
+            <JunctionPoint x="850.0" y="183.33333333333334"/>
+        </Arrow>
+        <Arrow id="P.4.8_A6_A63" source_box_id="A63" type="Output" label="Sensor Data" description="" join_target_id="P.4.8_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.4.8" auto_icom_code="O1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="583.0"/>
+                <Point x="850.0" y="583.0"/>
+                <Point x="850.0" y="183.0"/>
+            </Segments>
+            <JunctionPoint x="850.0" y="183.33333333333334"/>
+        </Arrow>
+        <Arrow id="P.2.6.1" source_box_id="A61" type="Output" label="Measured Part" description="" join_target_id="P.2.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.6.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-30.41241955403308" label_offset_y="-97.28573281972461" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="300.0" y="217.0"/>
+                <Point x="910.0" y="217.0"/>
+            </Segments>
+            <JunctionPoint x="900.0" y="216.66666666666669"/>
+            <BranchPoints>
+                <Point x="350.0" y="216.66666666666669"/>
+                <Point x="616.6666666666666" y="216.66666666666669"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.6.2" source_box_id="A62" type="Output" label="Inspected Part" description="" join_target_id="P.2.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="7.836269620379198" label_offset_y="-85.52492510590605" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="550.0" y="417.0"/>
+                <Point x="900.0" y="417.0"/>
+                <Point x="900.0" y="227.0"/>
+            </Segments>
+            <JunctionPoint x="900.0" y="216.66666666666669"/>
+            <BranchPoints>
+                <Point x="583.0" y="416.6666666666667"/>
+            </BranchPoints>
+        </Arrow>
+        <Arrow id="P.2.6.3" source_box_id="A63" type="Output" label="Tested Part" description="" join_target_id="P.2.6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.6.3" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="12.309969898537247" label_offset_y="46.26149574091187" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="800.0" y="617.0"/>
+                <Point x="900.0" y="617.0"/>
+                <Point x="900.0" y="227.0"/>
+            </Segments>
+            <JunctionPoint x="900.0" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="P.3_A6.1" target_box_id="A61" type="Mechanism" label="Metrology Equipment" description="" branch_parent_id="P.3_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.7" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-309.71639923453904" label_offset_y="-11.997149566523149" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="200.0" y="727.0"/>
+                <Point x="200.0" y="250.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3_A6.2" target_box_id="A62" type="Mechanism" label="NDE Equipment" description="" branch_parent_id="P.3_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.8" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-159.0774146248225" label_offset_y="18.905672616799393" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="717.0"/>
+                <Point x="450.0" y="717.0"/>
+                <Point x="450.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="P.3_A6.3" target_box_id="A63" type="Mechanism" label="Testing Equipment" description="" branch_parent_id="P.3_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.3.9" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="-178.38174693723397" label_offset_y="13.778985882490815" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="210.0" y="717.0"/>
+                <Point x="700.0" y="717.0"/>
+                <Point x="700.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="200.0" y="716.6666666666666"/>
+        </Arrow>
+        <Arrow id="D.5_A6_A62" target_box_id="A62" type="Mechanism" label="Software" description="" branch_parent_id="D.5_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="783.0"/>
+                <Point x="500.0" y="783.0"/>
+                <Point x="500.0" y="450.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="783.3333333333334"/>
+        </Arrow>
+        <Arrow id="D.5_A6_A63" target_box_id="A63" type="Mechanism" label="Software" description="" branch_parent_id="D.5_A6" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="D.5" auto_icom_code="M2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="250.0" y="783.0"/>
+                <Point x="750.0" y="783.0"/>
+                <Point x="750.0" y="650.0"/>
+            </Segments>
+            <JunctionPoint x="250.0" y="783.3333333333334"/>
+        </Arrow>
+        <Arrow id="P.2.6.1_A62" target_box_id="A62" type="Input" label="Measured Part" description="" branch_parent_id="P.2.6.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.6.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="350.0" y="217.0"/>
+                <Point x="350.0" y="383.0"/>
+                <Point x="400.0" y="383.0"/>
+            </Segments>
+            <JunctionPoint x="350.0" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="P.2.6.1_A63" target_box_id="A63" type="Input" label="Measured Part" description="" branch_parent_id="P.2.6.1" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.6.1" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="617.0" y="217.0"/>
+                <Point x="617.0" y="600.0"/>
+                <Point x="650.0" y="600.0"/>
+            </Segments>
+            <JunctionPoint x="616.6666666666666" y="216.66666666666669"/>
+        </Arrow>
+        <Arrow id="P.2.6.2_A61" target_box_id="A61" type="Input" label="Inspected Part" description="" branch_parent_id="P.2.6.2" is_manual_connection="true" tunnel_source="false" tunnel_target="false" icom_code="P.2.6.2" color="#000000" thickness="2" style="Solid" arrowhead_style="Standard" icom_callout_style="Jagged" hide_label="false" label_offset_x="0.0" label_offset_y="0.0" label_font_family="Arial" label_font_size="9" label_font_bold="false" label_font_italic="false">
+            <Segments>
+                <Point x="583.0" y="417.0"/>
+                <Point x="583.0" y="500.0"/>
+                <Point x="100.0" y="500.0"/>
+                <Point x="100.0" y="217.0"/>
+                <Point x="150.0" y="217.0"/>
+            </Segments>
+            <JunctionPoint x="583.0" y="416.6666666666667"/>
+        </Arrow>
+    </Diagram>
+</IDEF0Model>
