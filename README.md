@@ -9,14 +9,16 @@
 </p>
 
 <p align="center">
+  <img src="(https://zenodo.org/badge/1017644488.svg)" alt="DOI">
   <img src="https://img.shields.io/badge/version-0.9.0-blue" alt="Version 0.9.0">
   <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
   <img src="https://img.shields.io/badge/GUI-PyQt6-41CD52" alt="PyQt6">
   <img src="https://img.shields.io/badge/standard-ISO%2FIEC%2FIEEE%2031320--1-004225" alt="ISO/IEC/IEEE 31320-1">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT licence">
+  <img src="(https://img.shields.io/github/last-commit/DuncanWilliamGibbons/IDEF0?style=flat&color=orange)" alt="Last Commit">
 </p>
 
-[![DOI](https://zenodo.org/badge/1017644488.svg)](https://doi.org/) [![Views](https://api.visitorbadge.io/api/visitors?path=DuncanWilliamGibbons/IDEF0&label=Views&countColor=%23007ec6&style=flat)](https://github.com/DuncanWilliamGibbons/IDEF0) [![License](https://img.shields.io/github/license/DuncanWilliamGibbons/IDEF0?style=flat&color=blue)](https://github.com/DuncanWilliamGibbons/IDEF0/blob/main/LICENSE) [![Last Commit](https://img.shields.io/github/last-commit/DuncanWilliamGibbons/IDEF0?style=flat&color=orange)](https://github.com/DuncanWilliamGibbons/IDEF0/commits/main)
+[![DOI](https://zenodo.org/badge/1017644488.svg)](https://doi.org/) [![Views](https://api.visitorbadge.io/api/visitors?path=DuncanWilliamGibbons/IDEF0&label=Views&countColor=%23007ec6&style=flat)](https://github.com/DuncanWilliamGibbons/IDEF0) [![Last Commit](https://img.shields.io/github/last-commit/DuncanWilliamGibbons/IDEF0?style=flat&color=orange)](https://github.com/DuncanWilliamGibbons/IDEF0/commits/main)
 
 
 This software enables users to import, develop, and export Integrated Definition for Function Modeling (IDEF0) models that comply with the ISO/IEC/IEEE 31320-1[^1] standard for functional modeling. The software has an intuitive GUI for the modeler to edit the model and visualize IDEF0 diagrams. 
