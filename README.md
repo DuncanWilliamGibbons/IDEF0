@@ -1,5 +1,22 @@
-# IDEF0
+# IDEF0 Modeler
 [![GitHub All Releases](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total.svg)](https://github.com/DuncanWilliamGibbons/IDEF0/releases) [![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDuncanWilliamGibbons%2FIDEF0&count_bg=%2328a745&title_bg=%23555&style=for-the-badge&title=VIEWS)](https://hits.seeyoufarm.com)
+
+<p align="center">
+  <img src="Documents/Logo/logo_full.png" alt="IDEF0 Modeler" width="420">
+</p>
+
+<p align="center">
+  A desktop editor for IDEF0 function models that draws, checks and exports them
+  to the conformance rules of <b>ISO/IEC/IEEE 31320-1:2012</b>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.9.0-blue" alt="Version 0.9.0">
+  <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
+  <img src="https://img.shields.io/badge/GUI-PyQt6-41CD52" alt="PyQt6">
+  <img src="https://img.shields.io/badge/standard-ISO%2FIEC%2FIEEE%2031320--1-004225" alt="ISO/IEC/IEEE 31320-1">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT licence">
+</p>
 
 <!-- [![Downloads](https://img.shields.io/github/downloads/DuncanWilliamGibbons/IDEF0/total?style=for-the-badge&color=28a745&logo=github)](https://github.com/DuncanWilliamGibbons/IDEF0/releases) -->
 
@@ -37,21 +54,32 @@ Supported data files that can be imported or exported from the IDEF0 software in
 - IDEF0 (.idef0)
 - JSON (.json)
 - SysML V2 (.sysml)
-The following data formats are supported for exporting diagram views and plots:
+- UML (.xmi & .puml)
+- BPMN 2.0 (.bpmn)
+  
+The following data formats are supported for exporting diagram views, tabular data, and plots:
 - PDF (.pdf)
 - SVG (.svg)
 - PNG (.png)
 - JPEG (.jpg)
+- JSON (.json)
+- TEXT (.txt)
+- CSV (.csv)
+
+Functionality is included that parses the IDEF0 models to the following programming languages (requires further testing):
+- Python
+- Java
+- C++
 
 ## Examples and Testing
-
+The program was demonstrated and tested using the Powder Bed Fusion (PBF) Reference Activity Model published in the NIST AMS 100-60 report[^4].
 
 <!--  <img src="Figures/Interface.png" alt="Interface" width="65%"> <img src="Figures/Data Export.png" alt="Data Export" width="25%"> -->
 
 ## Citation and License
 If you adapt or use this software, please refer to the CITATION.cff file for the citation style. This software can be cited as follows:
 
-Gibbons, D. W. (2026). IDEF0 (Version 1.0) [Computer software]. 
+Gibbons, D. W. (2026). IDEF0 Modeler (Version 0.9.0) [Computer software]. 
 
 MIT License
 
@@ -62,3 +90,5 @@ Copyright (c) 2026 Duncan W. Gibbons, Ph.D.
 [^1]: ISO. Information technology — Modeling Languages — Part 1: Syntax and Semantics for IDEF0. ISO/IEC/IEEE 31320-1, 2012.
 [^2]: NIST. Integrated Definition for Function Modeling (IDEF0). NIST FIBS PUB 183, 1993.
 [^3]: OMG. OMG Systems Modeling Language™ (SysML®) Version 2.0: Part 1: Language Specification. 2025.
+[^4]: Gibbons, D. W., & Witherell, P. W. A Reference Activity Model for Additive Manufacturing: Powder Bed Fusion (NIST AMS 100-60). https://doi.org/10.6028/NIST.AMS.100-60. 2024.
+
