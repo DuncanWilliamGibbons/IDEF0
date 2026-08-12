@@ -4,8 +4,8 @@
 </p>
 
 <p align="center">
-  A desktop editor for IDEF0 function models that draws, checks and exports them
-  to the conformance rules of <b>ISO/IEC/IEEE 31320-1:2012</b>.
+  A desktop editor for developing IDEF0 function models that draws, checks, and exports IDEF0 models, diagrams, and data
+  in accordance with the conformance rules of <b>ISO/IEC/IEEE 31320-1:2012</b>.
 </p>
 
 <p align="center">
