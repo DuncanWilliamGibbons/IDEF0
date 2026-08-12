@@ -183,7 +183,13 @@ pin, not to a UML control flow.
 ## Examples and Testing
 The program was demonstrated and tested using the Powder Bed Fusion (PBF) Reference Activity Model published in the NIST AMS 100-60 report[^4].
 
-<!--  <img src="figures/Verification_Report.png" alt="Interface" width="65%"> <img src="figures/Diagram_Edits.png" alt="Data Export" width="25%"> -->
+<p align="center">
+  <img src="figures/Verification_Report.png" alt="Verification Report" width="420">
+</p>
+
+<p align="center">
+  <img src="figures/Diagram_Edits.png" alt="Diagram Customizations" width="420">
+</p>
 
 ## Limitations and Future Work
 - **Call arrows** are held in the model, validated, and
