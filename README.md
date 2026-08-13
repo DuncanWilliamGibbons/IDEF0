@@ -9,7 +9,7 @@
   <!-- GUI PyQt6 (Green) -->
   <a href="https://pypi.org/project/PyQt6/"><img src="https://img.shields.io/badge/GUI-PyQt6-green?style=flat&logo=qt&logoColor=white" alt="PyQt6"></a>
   <!-- Zenodo DOI (Blue) -->
-  <a href="https://doi.org/10.5281/zenodo.YOUR_ZENODO_ID"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21910947-blue?style=flat" alt="DOI"></a>
+  <a href="https://doi.org/10.5281/zenodo.21910947"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21910947-blue?style=flat" alt="DOI"></a>
   <!-- Code Version (Orange) -->
   <a href="https://github.com/DuncanWilliamGibbons/IDEF0/releases/latest"><img src="https://img.shields.io/github/v/release/DuncanWilliamGibbons/IDEF0?color=orange&label=version&style=flat" alt="GitHub release"></a>
   <!-- Last Commit (Bright Green) -->
