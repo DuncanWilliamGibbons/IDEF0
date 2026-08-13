@@ -198,7 +198,7 @@ The figure below presents the verification report of this model, showing how the
 ## Citation and License
 If you adapt or use this software, please refer to the CITATION.cff file for the citation style. This software can be cited as follows:
 
-Gibbons, D. W. (2026). IDEF0 Modeler (Version 0.9.0) [Computer software]. 
+Gibbons, D. W. (2026). IDEF0 Modeler (Version 0.9.0) [Computer software]. https://doi.org/10.5281/zenodo.21910947
 
 MIT License
 
