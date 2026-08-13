@@ -116,30 +116,31 @@ including parsing, layout, routing, conformance checking, and exporting. `src/gu
 contains the code for the `PyQt6` GUI and widgets.
 
 ```
-src/main.py              MainWindow - menus, toolbars, undo history, wires GUI to core
+src/main.py                                          MainWindow - menus, toolbars, undo history, wires GUI to core
 │
 ├── src/core/             
-│   ├── model.py             the data model: IDEF0Model, Diagram, ActivityBox,
-│   │                        Arrow, ArrowType, Point
-│   ├── layout.py            diagonal box placement, Manhattan arrow routing
-│   ├── xml_io.py            convert model to and from .idefproj / .idef0 format
-│   ├── compliance.py        evaluates the model against the validation criteria
-│   ├── export_common.py     resolves the model into an activity tree
-│   └── {code,uml,sysml,plantuml,bpmn}_export.py
-│                            parses the model and exports to a desired format
+│   ├── model.py                                     the data model: IDEF0Model, Diagram, ActivityBox,
+│   │                                                Arrow, ArrowType, Point
+│   ├── layout.py                                    diagonal box placement, Manhattan arrow routing
+│   ├── xml_io.py                                    convert model to and from .idefproj / .idef0 format
+│   ├── compliance.py                                evaluates the model against the validation criteria
+│   ├── export_common.py                             resolves the model into an activity tree
+│   └── {code,uml,sysml,plantuml,bpmn}_export.py     parses the model and exports to a desired format
 │
-└── src/gui/                 PyQt6 only
-    ├── diagram_scene.py     lays out and routes a diagram from src.core.layout
-    ├── diagram_items.py     draws function boxes, arrows, labels, tunnel notation
-    ├── management_views.py  ICOMs / Functions / Flow Report tables
-    ├── verification_tab.py  runs src.core.compliance and renders the report
-    ├── frame_item.py, item_panel.py, properties_panel.py, dialogs.py, theme.py
-    │                        frame border, per-item editing panel, settings
-    │                        panel, modal dialogs, the dark-mode stylesheet
+└── src/gui/                                         PyQt6 GUI
+    ├── diagram_scene.py                             lays out and routes a diagram from src.core.layout
+    ├── diagram_items.py                             draws function boxes, arrows, labels, tunnel notation
+    ├── management_views.py                          ICOMs / Functions / Flow Report tables
+    ├── verification_tab.py                          runs src.core.compliance and renders the report
+    ├── frame_item.py                                frame border
+    ├── item_panel.py                                per-item editing panel
+    ├── properties_panel.py                          settings panel
+    ├── dialogs.py                                   modal dialogs
+    └── theme.py                                     the dark-mode stylesheet
 
-docs/                     design rationale and export mappings
-examples/                 reference models for testing
-figures/                  logos and example screenshots
+docs/                                                design rationale and export mappings
+examples/                                            reference models for testing
+figures/                                             logos and example screenshots
 ```
 
 ## Data Formats and Exports
@@ -162,7 +163,7 @@ Report exports this data, including any applied filters, to either CSV, JSON, XM
 **File → Export Code Architecture** writes the functional architecture as:
 
 | Target | Output | Mapping |
-| :--- | :--- | :--- |
+| :------- | :--- | :--- |
 | Python | module that runs as it stands | one method per function, signals wired through a per-activity context |
 | Java | class that compiles | as above |
 | C++ | translation unit that compiles | as above |
